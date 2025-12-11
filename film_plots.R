@@ -1,8 +1,8 @@
 install.packages("librarian")
 
-librarian::shelf(ggplot2)
+librarian::shelf(ggplot2, here)
 
-films <- read.csv("films.csv")
+films <- read.csv(here("datasets", "films.csv"))
 head(films)
 colnames(films)
 
