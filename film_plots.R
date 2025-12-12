@@ -1,6 +1,8 @@
+renv::init()
 install.packages("librarian")
+renv::snapshot()
 
-librarian::shelf(ggplot2, here)
+librarian::shelf(ggplot2, here, renv)
 
 films <- read.csv(here("datasets", "films.csv"))
 head(films)
